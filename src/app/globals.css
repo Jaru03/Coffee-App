@@ -7,7 +7,7 @@
   --foreground: #171717;
 }
 
-.hero{
+.hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../public/hero.jpg);
   background-position: top;
   background-repeat: no-repeat;
@@ -15,3 +15,94 @@
 
 }
 
+.services {
+  background-image: url(../../public/bg-coffee-2.jpg);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services__container {
+  display: grid;
+  grid-template-rows: repeat(1fr);
+}
+
+.services__item {
+  width: 130px;
+  height: 130px;
+  border-radius: 100%;
+}
+
+.services__item--1 {
+  background-image: url(../../public/te_helado.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services__item--2 {
+  background-image: url(../../public/vaso_cocacola.jpg);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services__item--3 {
+  background-image: url(../../public/pizza.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services__item--4 {
+  background-image: url(../../public/taza_cafe.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.services__item--5 {
+  background-image: url(../../public/bolsa_cafe.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.recomendations__container {
+  display: grid;
+  grid-template-rows: 3;
+}
+
+.recomendations__title {
+  align-self: center;
+}
+
+.learnMore {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../public/bg-coffee-2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.footer {
+  .footer__container {
+    .footer__section {
+
+      .footer__ul > * {
+        border: solid 1px white;
+        border-top: none;
+        border-bottom: none;
+        border-right: none;
+        padding-left: 15px;
+
+        &:first-child{
+          border: none;
+        }
+
+      }
+
+    }
+
+
+  }
+}

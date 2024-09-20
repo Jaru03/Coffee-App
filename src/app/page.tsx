@@ -20,7 +20,7 @@ export default function Home() {
             <li className="navbar__item">Order</li>
             <li className="navbar__item">Pay</li>
             <li className="navbar__item">Store</li>
-            <img className="navbar__item--icon" src="" alt="" />
+            
           </ul>
         </nav>
       </header>
@@ -143,7 +143,7 @@ export default function Home() {
             <article className="flex flex-col gap-4">
               <h3 className="font-semibold text-lg">Quick Links</h3>
               <p>Careers</p>
-              <p>Seasson's Gifting</p>
+              <p>Seasson`s Gifting</p>
               <p>FAQS</p>
               <p>Customer Service</p>
               <p>Delivery</p>

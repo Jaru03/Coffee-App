@@ -1,35 +1,31 @@
+'use client'
+
 import Image from "next/image";
 import CoffeRecomendation from "./components/CoffeRecomendation";
+import Header from "./components/Header";
+import { useState } from "react";
 
 export default function Home() {
+
+  const [button, setButton] = useState(false)
+
+    const handleButtonOpen = () => {
+        setButton(true)
+
+    } 
+    const handleButtonClose = () => {
+        setButton(false)
+    } 
   return (
-    <div>
-      <header className="header w-full h-28 flex items-end pb-5 justify-between z-10 fixed bg-white">
-        <nav className="navbar flex items-center justify-between max-w-[1000px] mx-auto">
-          <Image
-            src={"/starbucks.png"}
-            width={35}
-            height={35}
-            alt="logo"
-            className="mr-[10%]"
-          />
-          <ul className="navbar__list flex gap-10 font-medium">
-            <input className="bg-[#e2e2e2] px-4 py-1 rounded-sm font-normal" type="text" placeholder="Tell us what you need" />
-            <li className="navbar__item">Home</li>
-            <li className="navbar__item">Gift</li>
-            <li className="navbar__item">Order</li>
-            <li className="navbar__item">Pay</li>
-            <li className="navbar__item">Store</li>
-            
-          </ul>
-        </nav>
-      </header>
+    <div className="relative">
+      
+      <Header button={button} handleButtonClose={handleButtonClose} />
       <main className="main">
         <section className="hero h-[100vh] flex flex-col items-start pl-[20vw] justify-center">
           <div className="flex flex-col items-start gap-10">
             <main>
-              <h1 className="text-7xl font-bold uppercase text-white">Handcrafted</h1>
-              <p className="text-white text-lg">
+              <h1 className="text__hero text-7xl font-bold uppercase text-white">Handcrafted</h1>
+              <p className="p__hero text-white text-lg">
                 Choose from our wide range of handcrafted coffees
               </p>
             </main>
@@ -38,11 +34,12 @@ export default function Home() {
             </footer>
           </div>
         </section>
+      <p onClick={handleButtonOpen} className={`button_open fixed top-4 right-4 text-red-700`}>O</p>
         <section className="services mt-14 h-[350px]">
           <div className="services__container h-full">
 
-            <h2 className="self-center ml-[18vw] font-semibold text-2xl w-[250px] h-[20px] text-white ">Handvrafted Curations</h2>
-            <ul className="justify-self-center flex gap-14 text-white font-medium">
+            <h2 className="services__title self-center ml-[18vw] font-semibold text-2xl w-[250px] h-[20px] text-white ">Handvrafted Curations</h2>
+            <ul className="services__ul justify-self-center flex gap-14 text-white font-medium">
               <li className="flex flex-col items-center">
                 <div className="services__item services__item--1">
 
@@ -64,14 +61,14 @@ export default function Home() {
 
                 <p>Food</p>
               </li>
-              <li className="flex flex-col items-center">
+              <li className="services__cupCoffee flex flex-col items-center">
                 <div className="services__item services__item--4">
 
                 </div>
 
                 <p>Marchandise</p>
               </li>
-              <li className="flex flex-col items-center">
+              <li className="services__lastItem flex flex-col items-center">
                 <div className="services__item services__item--5">
 
                 </div>
@@ -85,13 +82,13 @@ export default function Home() {
           <div className="w-max-[800px] recomendations__container text-[#1e3932]">
 
             <h2 className="recomendations__title font-semibold text-2xl text-[#1e3932]">Barista Recommends</h2>
-            <div className="flex justify-center gap-2">
+            <div className="recomendations__products flex justify-center gap-2">
               <CoffeRecomendation image="vanilla_latte.jpg" info="Bebida" price="20.02" title="Vanilla Latte" />
               <CoffeRecomendation image="salted_caramel_cold_brew.jpg" info="Bebida" price="15.10" title="Salted Caramel Cold" />
               <CoffeRecomendation image="pumpkin_spice_latte.jpg" info="Bebida" price="10.01" title="Pumpkin Spice Latte" />
-              <CoffeRecomendation image="iced_white_chocolate_mocha.jpg" info="Bebida" price="5.50" title="Iced White Chocolate" />
+              <CoffeRecomendation image="iced_white_chocolate_mocha.jpg" info="Bebida" price="5.50" title="Iced White Chocolate" className="iced_white" />
             </div>
-            <h2 className="font-semibold text-2xl text-[#1e3932]">Learn more about the world of coffee</h2>
+            <h2 className="learnMore__title font-semibold text-2xl text-[#1e3932]">Learn more about the world of coffee</h2>
           </div>
         </section>
         <section className="learnMore h-[400px] flex justify-center">

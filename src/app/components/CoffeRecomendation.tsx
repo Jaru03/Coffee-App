@@ -7,12 +7,13 @@ interface Props{
   image: string,
   title: string,
   info: string,
-  price: string
+  price: string,
+  className?: string
 }
 
-const CoffeRecomendation = ({image, title, info, price}:Props) => {
+const CoffeRecomendation = ({image, title, info, price, className}:Props) => {
   return (
-    <article className='w-[230px] h-[310px] shadow-2xl'>
+    <article className={`w-[230px] h-[310px] shadow-2xl ${className}`}>
       <header>
         <Image src={`/${image}`}
         className='max-w-[230px] max-h-[160px] object-cover '
